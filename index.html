@@ -1,10 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ministério ide</title>
+    <script>
+      function setFavicon(theme) {
+        const link =
+          document.querySelector("link[rel~='icon']") ||
+          document.createElement('link');
+          link.rel = 'icon';
+          link.type = 'image/png';
+          link.href = theme === 'dark' ? '/img/logo-leao-dark.ico' : '/img/logo-leao-light.ico';
+          document.head.appendChild(link);
+      }
+
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setFavicon(isDark ? 'dark' : 'light');
+
+      // Se o usuário mudar o tema enquanto navega:
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', (e) => {
+          setFavicon(e.matches ? 'dark' : 'light');
+        });
+    </script>
   </head>
   <body>
     <div id="root"></div>
