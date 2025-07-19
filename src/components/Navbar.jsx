@@ -5,7 +5,7 @@ import { TfiYoutube } from 'react-icons/tfi';
 
 const Navbar = () => {
   return (
-    <nav className="w-screen bg-white text-principal-preto">
+    <nav className="w-screen bg-white text-principal-preto font-principal-poppins">
       <div className="flex justify-between mx-7 items-center">
         <div>
           <Link to="/">
