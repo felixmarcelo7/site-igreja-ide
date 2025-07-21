@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
+import { useEffect } from 'react';
 
 const Colabore = () => {
-    return <h1>Colabore</h1>
-}
+  useEffect(() => {
+    document.title = 'Colabore - Ministério ide';
+  });
+
+  return <h1>Colabore</h1>;
+};
 
 export default Colabore;

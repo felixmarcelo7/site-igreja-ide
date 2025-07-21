@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
+import { useEffect } from 'react';
 
 const Projetos = () => {
-    return <h1>Projetos</h1>
-}
+  useEffect(() => {
+    document.title = 'Projetos - Ministério ide';
+  }, []);
+
+  return <h1>Projetos</h1>;
+};
 
 export default Projetos;

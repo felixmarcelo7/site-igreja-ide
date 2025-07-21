@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
+import { useEffect } from 'react';
 
 const VisiteNos = () => {
-    return <h1>VisiteNos</h1>
-}
+  useEffect(() => {
+    document.title = 'Visite nos - Ministério ide';
+  }, []);
+  return <h1>VisiteNos</h1>;
+};
 
 export default VisiteNos;
