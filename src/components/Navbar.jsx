@@ -1,13 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
-import { TfiYoutube } from 'react-icons/tfi';
+import { FaYoutube } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
+  const isNosVisite = useLocation().pathname === '/visitenos';
+  const isContato = useLocation().pathname === '/contato';
+
   useEffect(() => {
+    //se estiver na página de contato ou nos visite a cor da navbar não muda
+    if (isContato || isNosVisite) {
+      setScrolled(true);
+      return;
+    } else {
+      setScrolled(false);
+    }
+
     const onScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -18,7 +30,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [isContato, isNosVisite]);
 
   return (
     <nav
@@ -100,7 +112,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <ul className="flex gap-5">
+          <ul className="flex gap-5 items-center">
             <li>
               <Link>
                 <FaFacebookSquare className="text-xl" />
@@ -113,7 +125,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link>
-                <TfiYoutube className="text-xl" />
+                <FaYoutube className="text-2xl"/>
               </Link>
             </li>
           </ul>

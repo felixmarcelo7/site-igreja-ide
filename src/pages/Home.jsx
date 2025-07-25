@@ -49,9 +49,7 @@ const Home = () => {
         </div>
       </section>
       <section className="font-principal-poppins bg-secundaria-fundo py-7">
-        <h2 className="font-bold text-xl text-center mb-6">
-          PRÓIXIMOS EVENTOS
-        </h2>
+        <h2 className="font-bold text-xl text-center mb-6">PRÓXIMOS EVENTOS</h2>
         <Swiper
           className="mySwiper"
           slidesPerView={1}
@@ -72,6 +70,54 @@ const Home = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </section>
+      <section className="font-principal-poppins text-white bg-black pt-10">
+        <div className="flex justify-around">
+          <div className="flex flex-col gap-7">
+            <h2 className="text-3xl font-bold">
+              Fique por Dentro da Nossa Caminhada
+            </h2>
+            <div>
+              <p className="italic">
+                “A tua palavra é lâmpada que ilumina os meus passos e <br /> luz
+                que clareia o meu caminho." Sl 119:105
+              </p>
+              <p>
+                Inscreva-se para receber estudos, pregações e tudo <br /> o que
+                Deus está fazendo entre nós.
+              </p>
+            </div>
+
+            <form className="flex flex-col items-start text-black gap-3">
+              <input
+                type="text"
+                placeholder="Digite seu nome"
+                id="nome"
+                className="py-1 px-3 bg-white rounded-lg focus:outline-none"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Digite seu E-mail"
+                id="e-mail"
+                className="py-1 px-3 bg-white rounded-lg focus:outline-none"
+                required
+              />
+              <input
+                type="submit"
+                value="Enviar"
+                className="bg-principal-amarelo py-0.5 px-3 rounded-lg font-bold hover:bg-hover-buttom-amarelo"
+              />
+            </form>
+          </div>
+          <div>
+            <img
+              className="h-96"
+              src="/img/homem-orando.png"
+              alt="homem orando"
+            />
+          </div>
+        </div>
       </section>
     </>
   );
