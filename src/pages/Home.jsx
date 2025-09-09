@@ -71,7 +71,7 @@ const Home = () => {
           ))}
         </Swiper>
       </section>
-      <section className="font-principal-poppins text-white bg-black pt-10">
+      <section className="font-principal-poppins text-white bg-black p-10">
         <div className="flex justify-around">
           <div className="flex flex-col gap-7">
             <h2 className="text-3xl font-bold">
@@ -93,27 +93,27 @@ const Home = () => {
                 type="text"
                 placeholder="Digite seu nome"
                 id="nome"
-                className="py-1 px-3 bg-white rounded-lg focus:outline-none"
+                className="py-1 px-3 w-sm bg-white rounded-lg focus:outline-none "
                 required
               />
               <input
                 type="email"
                 placeholder="Digite seu E-mail"
                 id="e-mail"
-                className="py-1 px-3 bg-white rounded-lg focus:outline-none"
+                className="py-1 px-3 w-sm bg-white rounded-lg focus:outline-none"
                 required
               />
               <input
                 type="submit"
                 value="Enviar"
-                className="bg-principal-amarelo py-0.5 px-3 rounded-lg font-bold hover:bg-hover-buttom-amarelo"
+                className="bg-principal-amarelo py-0.5 px-3 cursor-pointer rounded-lg font-bold hover:bg-hover-buttom-amarelo"
               />
             </form>
           </div>
           <div>
             <img
-              className="h-96"
-              src="/img/homem-orando.png"
+              className="h-72"
+              src="/img/LOGO-igreja-branca-sem-borda.png"
               alt="homem orando"
             />
           </div>
